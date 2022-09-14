@@ -2,7 +2,6 @@ import logging
 import boto3
 from botocore.exceptions import ClientError
 
-
 def create_bucket(bucket_name, region=None):
     try:
         if region is None:
@@ -20,5 +19,3 @@ def create_bucket(bucket_name, region=None):
         logging.error(e)
         return False
     return True
-
-create_bucket("kubelabstesting")
